@@ -21,5 +21,6 @@ Jose Joaquin Torres Ramirez ==> https://github.com/betiko0166/phpmyadmin-proyect
 
 Alberto Román Ruiz ==> https://github.com/aromrui1303/HLC_Alberto.git => Supermercado
 
+Guillermo De la Torre Aguilera ==> https://github.com/G-dlT/2ASIR-PHP.git => escuela de musica
 
 
