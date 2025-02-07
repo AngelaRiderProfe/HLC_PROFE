@@ -32,4 +32,5 @@ Juan Carlos Borrego Barranco ==> https://github.com/Sin3233/HLC_JC.git =>
 
 Antonio Aguilar Humanes ==> https://github.com/elgordo9675/hlc_php_myadmin => Ferretería
 
+Jerónimo Racero Filter ==> https://github.com/jeronimo358/PHP.git => Hotel
 
