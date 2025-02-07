@@ -25,24 +25,39 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $id = $_POST['id'];
 
         // Verificar que existe el ID
-        $query = "SELECT count(id) FROM alumnos WHERE id='$id'";
-        $resultado = mysqli_query($conexion, $query);
+        $queryLocalizar= "SELECT count(id) as numID FROM alumnos WHERE id=$id";
+        $resultadoLocalizar = mysqli_query($conexion, $queryLocalizar);
+
 
         // Verificar si la consulta fue exitosa
-        if (mysqli_num_rows($resultado) == 0) {
-            //pngo un mensaje para explicar que no se ha encontrado
-            //un alumno con ese nombre.
+        if ($resultadoLocalizar) {
+            $datosAlumno = mysqli_fetch_assoc($resultadoLocalizar);
+            $numAlumnos=(int) $datosAlumno['numID'];
+            // si existe el resultado igual a 1, puedo eliminarlo:
+            if($numAlumnos == 1){
+                
+                $queryDelete = "DELETE FROM alumnos WHERE id=$id";
+                $resultadoBorrar = mysqli_query($conexion, $queryDelete);
+            
+                // Si la query ha ido bien, muestro un mensaje para indicarlo.
 
-            //Le facilito un enlace al fichero de alta de alumnos, por si quiere introducirlo.
+                if ($resultadoBorrar){
+                    echo "<div class='container mt-4'>
+                        <h2>El usuario se ha borrado correctamente</h2>
+                    </div>";
+                }else{
+                    echo "<div class='container mt-4'>
+                <h2>Se ha localizado pero no se ha podido borrar</h2>
+              </div>";
+                }
+            }else{
+                echo "<div class='container mt-4'>
+                <h2>El numero de alumnos no es el indicado. (Si me interesa borrar de uno en uno)</h2>
+              </div>";
+            }
 
-            // Le puedo facilitar un enlace al fichero que muestra todos los alumnos.
-
-            // Añado un boton de volver para, que vuelva a la pagina de opciones.php.
             ?>
             <div class="card-body">
-                <div class="mb-3">
-                    <a href="#.php" class="btn btn-primary">Introducir alumnos</a>
-                </div>
 
                 <div class="mb-3">
                     <a href="leerTodos.php" class="btn btn-primary">Ver alumnos</a>
@@ -53,45 +68,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
             </div>
             <?php
-        }
-
-        // Mostrar los resultados en formato de tabla
-        echo "<div class='container mt-4'>
-                <h2>Resultados para: " . htmlspecialchars($nombre) . "</h2>
-                <table class='table table-bordered table-striped'>
-                    <thead class='thead-dark'>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Edad</th>
-                            <th>Curso</th>
-                            <th>Promociona</th>
-                        </tr>
-                    </thead>
-                    <tbody>";
-
-        // Recorrer cada fila de resultados y mostrarla
-        while ($row = mysqli_fetch_assoc($resultado)) {
-            echo "<tr>
-                    <td>" . $row['id'] . "</td>
-                    <td>" . $row['nombre'] . "</td>
-                    <td>" . $row['edad'] . "</td>
-                    <td>" . $row['curso'] . "</td>
-                    <td>" . $row['promociona'] . "</td>
-                </tr>";
-        }
-
-        echo "</tbody></table></div>";
-    } else {
-        echo "<div class='container mt-4'>
-                <h2>No se proporcionó un nombre para la búsqueda</h2>
+        }else{
+            echo "<div class='container mt-4'>
+                <h2>No se ha localizado el id</h2>
               </div>";
+        }
     }
-} else {
-    echo "<div class='container mt-4'>
-            <h2>Acceso no permitido. El formulario debe enviarse mediante POST.</h2>
-          </div>";
 }
+
+      
 
 ?>
 <!-- Scripts de Bootstrap -->
