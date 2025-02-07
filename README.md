@@ -21,5 +21,5 @@ Jose Joaquin Torres Ramirez ==> https://github.com/betiko0166/phpmyadmin-proyect
 
 Alberto Román Ruiz ==> https://github.com/aromrui1303/HLC_Alberto.git => Supermercado
 
-
+José Pavón Pérez ==> https://github.com/josepavon1287/HLC_JosePP.git => Películas
 
