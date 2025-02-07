@@ -34,3 +34,4 @@ Antonio Aguilar Humanes ==> https://github.com/elgordo9675/hlc_php_myadmin => Fe
 
 Jerónimo Racero Filter ==> https://github.com/jeronimo358/PHP.git => Hotel
 
+Axel Alfredo Aarón Ruiz Calderón ==> https://github.com/AxelRuizC/HLC.git ==> Empresa
