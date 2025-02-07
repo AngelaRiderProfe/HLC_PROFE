@@ -7,14 +7,7 @@ Nombre: ==> Repo
 
 Manuel Moreno Casado ==> https://github.com/manuel09097/hlc_manuel.git
 
-
-Daniel Gómez Otero ==> https://github.com/danigomez14/HLC_DANI.git Tema proyecto = Semana Santa.
-
-
-Adolfo Garrido Cosano --> fauna --> https://github.com/Adolfo-afk/php.git
-
-Manuel Guisado Marrón ==> https://github.com/ManuGxx/Prueba-PHP.git
-
-Jose Joaquin Torres Ramirez ==> https://github.com/betiko0166/phpmyadmin-proyecto.git
+Daniel Gómez Otero ==> https://github.com/danigomez14/HLC_DANI.git
 
 
+Antonio Aguilar Humanes ==> https://github.com/elgordo9675/hlc_php_myadmin tema: Ferretería
