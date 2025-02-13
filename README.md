@@ -5,6 +5,7 @@ Repositorio de profesora para HLC - 2º ASIR - 2024/2025
 Alumnos:
 Nombre: ==> Repo
 
+Mario Macho Romero ==> https://github.com/mariomr7/HLC.git => Sistema de reservas para canchas deportivas
 
 Manuel Moreno Casado ==> https://github.com/manuel09097/hlc_manuel.git => Biblioteca
 
